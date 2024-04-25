@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import google from "@/public/google-io-2023-1.png";
 const Details = () => {
