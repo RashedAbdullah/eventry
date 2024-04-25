@@ -1,6 +1,9 @@
 import Header from "@/components/header";
 import BookingSection from "@/components/booking-section";
 import Details from "@/components/details";
+import SignUp from "@/components/signup";
+import Signin from "@/components/signin";
+import Payment from "@/components/payment";
 
 const Home = () => {
   return (
@@ -9,6 +12,9 @@ const Home = () => {
         <Header />
         <BookingSection />
         {/* <Details/> */}
+        {/* <SignUp /> */}
+        {/* <Signin /> */}
+        {/* <Payment /> */}
       </section>
     </main>
   );
