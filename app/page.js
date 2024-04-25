@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import BookingSection from "@/components/booking-section";
+import Details from "@/components/details";
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <section className="container">
         <Header />
         <BookingSection />
+        {/* <Details/> */}
       </section>
     </main>
   );
