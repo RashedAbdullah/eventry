@@ -1,5 +1,6 @@
 import Image from "next/image";
 import googleImage from "@/public/google-io-2023-1.png";
+import ActionButtons from "./actiion-buttons";
 
 const BookingCard = () => {
   return (
@@ -20,15 +21,7 @@ const BookingCard = () => {
         </div>
 
         {/* <!-- Buttons --> */}
-        <div className="w-full flex gap-4 mt-4">
-          {/* <!-- bg-indigo-600 indicating Active --> */}
-          <button className="w-full bg-indigo-600 hover:bg-indigo-800">
-            Interested
-          </button>
-
-          {/* <!-- bg-green-600 indicating Active --> */}
-          <button className="w-full">Going</button>
-        </div>
+        <ActionButtons />
       </div>
     </div>
   );
