@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "@/css/globalcss.css";
 import Navbar from "@/components/navbar";
+import { dbConnect } from "@/services/mongo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,7 +10,9 @@ export const metadata = {
   description: "Booking events",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const data = await dbConnect();
+  console.log(data);
   return (
     <html lang="en">
       <body className={inter.className}>
