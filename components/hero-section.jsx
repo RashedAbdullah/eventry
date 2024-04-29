@@ -2,27 +2,32 @@ import Image from "next/image";
 import google from "@/public/google-io-2023-1.png";
 import ActionButtons from "./actiion-buttons";
 
-const HeroSection = () => {
+const HeroSection = ({ event }) => {
   return (
     <section className="container">
       <div className="bg-gradient-to-b from-slate-200/20 to-slate-800/30">
-        <Image src={google} alt="Event 1" className="h-[450px] mx-auto" />
+        <Image
+      
+          src={event.imageUrl}
+          height={900}
+          width={900}
+          alt={event.name}
+          className="h-[450px] mx-auto object-cover"
+        />
       </div>
 
       <div className="lg:flex items-end">
         <div className="flex-auto py-4 w-full">
-          <h1 className="font-bold text-2xl">Google I/O Extended</h1>
-          <p className="text-[#9C9C9C] text-base mt-1">
-            Rangpur, Dhaka, Bangladesh, Rangpur, Bangladesh
-          </p>
+          <h1 className="font-bold text-2xl">{event.name}</h1>
+          <p className="text-[#9C9C9C] text-base mt-1">{event.location}</p>
           <div className="text-[#737373] text-sm mt-1">
-            <span>1k Interested</span>
+            <span>{event.interested_ids.length} Interested</span>
             <span>|</span>
-            <span>40K Going</span>
+            <span>{event.going_ids.length} Going</span>
           </div>
         </div>
 
-        <ActionButtons />
+        <ActionButtons formDetails={true} />
       </div>
     </section>
   );

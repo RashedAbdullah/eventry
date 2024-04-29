@@ -1,7 +1,7 @@
 import Details from "@/components/details";
 
-const DetailsPage = () => {
-  return <Details />;
+const DetailsPage = ({ params: { id } }) => {
+  return <Details id={id} />;
 };
 
 export default DetailsPage;

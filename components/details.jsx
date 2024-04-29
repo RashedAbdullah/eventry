@@ -1,15 +1,17 @@
 import EventDetails from "./event-detalis";
 import Location from "./location";
 import HeroSection from "./hero-section";
-const Details = () => {
+import { getEventById } from "@/database/queries";
+const Details = async ({ id }) => {
+  const eventById = await getEventById(id);
+
   return (
     <main>
-      <HeroSection />
-
+      <HeroSection event={eventById} />
       <section className="container">
         <div className="grid grid-cols-5 gap-12 my-12">
-          <EventDetails />
-          <Location />
+          <EventDetails event={eventById}/>
+          <Location event={eventById}/>
         </div>
       </section>
     </main>
