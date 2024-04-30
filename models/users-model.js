@@ -1,4 +1,4 @@
-const { Schema, default: mongoose } = require("mongoose");
+import { Schema, mongoose } from "mongoose";
 
 const schema = new Schema({
   name: {
