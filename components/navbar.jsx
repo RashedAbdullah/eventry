@@ -1,6 +1,7 @@
 import Image from "next/image";
 import lwsLogo from "@/public/logo.svg";
 import Link from "next/link";
+import SigninOut from "./signin-out";
 
 const Navbar = () => {
   return (
@@ -13,9 +14,7 @@ const Navbar = () => {
         </div>
 
         <ul className="flex gap-4 text-[#9C9C9C]">
-          <li>
-            <Link href="/signin">Login</Link>
-          </li>
+          <SigninOut />
           <li>About</li>
           <li>Contact Us</li>
         </ul>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import google from "@/public/google-io-2023-1.png";
 import ActionButtons from "./actiion-buttons";
 
 const HeroSection = ({ event }) => {
@@ -7,7 +6,6 @@ const HeroSection = ({ event }) => {
     <section className="container">
       <div className="bg-gradient-to-b from-slate-200/20 to-slate-800/30">
         <Image
-      
           src={event.imageUrl}
           height={900}
           width={900}
@@ -27,7 +25,12 @@ const HeroSection = ({ event }) => {
           </div>
         </div>
 
-        <ActionButtons formDetails={true} />
+        <ActionButtons
+          eventId={event._id}
+          interestedUserIds={event.interested_ids}
+          goingUserId={event?.going_ids}
+          formDetails={true}
+        />
       </div>
     </section>
   );

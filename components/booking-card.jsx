@@ -1,11 +1,12 @@
 import Image from "next/image";
-import googleImage from "@/public/google-io-2023-1.png";
 import ActionButtons from "./actiion-buttons";
 import Link from "next/link";
+import EventScheamScript from "./meta/event-schema-script";
 
 const BookingCard = ({ event }) => {
   return (
     <div className="overflow-hidden rounded-md bg-[#242526]">
+      <EventScheamScript event={event} />
       <Image
         src={event.imageUrl}
         alt={event.name}
@@ -26,7 +27,12 @@ const BookingCard = ({ event }) => {
         </div>
 
         {/* <!-- Buttons --> */}
-        <ActionButtons />
+        <ActionButtons
+          eventId={event._id.toString()}
+          interestedUserIds={event.interested_ids}
+          goingUserId={event?.going_ids}
+          formDetails={true}
+        />
       </div>
     </div>
   );
